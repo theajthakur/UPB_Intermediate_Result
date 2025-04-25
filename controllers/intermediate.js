@@ -10,7 +10,9 @@ const fetchInterMediateResult = async (req, res) => {
   result.mother = $("#ctl00_cphBody_lbl_M_NAME").text();
   result.father = $("#ctl00_cphBody_lbl_F_NAME").text();
   result.stream = $("#ctl00_cphBody_lbl_GROUP").text();
+  result.roll = roll;
   const marks = [];
+  let totM = 0;
   for (let i = 1; i <= 5; i++) {
     const tmp = {};
     tmp.subject = $(`#ctl00_cphBody_lbl_SUBJ_${i}`).text();
@@ -19,8 +21,10 @@ const fetchInterMediateResult = async (req, res) => {
     tmp.practical =
       parseInt(tmp.obtained_total) - parseInt(tmp.obtained_theory);
     marks.push(tmp);
+    totM += parseInt($(`#ctl00_cphBody_lbl_TOT_MRK${i}`).text());
   }
   result.marks = marks;
+  result.percentage = totM / 5;
   return res.json(result);
 };
 
