@@ -23,8 +23,8 @@ This is a **Node.js backend API** that scrapes UP Board Intermediate results and
 
 ## 📁 Project Structure
 
-├── index.js
-├── package.json
+├── index.js  
+├── package.json  
 └── README.md
 
 ---
