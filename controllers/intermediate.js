@@ -5,6 +5,9 @@ const fetchInterMediateResult = async (req, res) => {
   const { standard, district, roll } = req.params;
   const result = {};
   const data = await fetchUPMSPResult(standard, district, roll);
+  if (typeof data === "object" && data.status === "error") {
+    return res.status(500).json(data);
+  }
   const $ = cheerio.load(data);
   result.name = $("#ctl00_cphBody_lbl_C_NAME").text();
   if (!result.name) {

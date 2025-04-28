@@ -43,10 +43,10 @@ async function fetchUPMSPResult(standard = 12, districtCode = 45, rollNo) {
     return html;
   } catch (error) {
     console.log(error);
-    return res.status(400).json({
+    return {
       status: "error",
       message: error.message || "Something Went Wrong",
-    });
+    };
   }
 }
 module.exports = { fetchUPMSPResult };
