@@ -43,7 +43,7 @@ const fetchInterMediateResult = async (req, res) => {
     tmp.practical =
       parseInt(tmp.obtained_total) - parseInt(tmp.obtained_theory);
     marks.push(tmp);
-    totM += parseInt($(`#ctl00_cphBody_lbl_TOT_MRK${i}`).text());
+    totM += parseInt(tmp.obtained_total);
   }
   result.marks = marks;
   result.percentage = totM / 5;
