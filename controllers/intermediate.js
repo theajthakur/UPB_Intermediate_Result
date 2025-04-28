@@ -46,7 +46,7 @@ const fetchInterMediateResult = async (req, res) => {
     totM += parseInt(tmp.obtained_total);
   }
   result.marks = marks;
-  result.percentage = totM / i;
+  result.percentage = totM / marks.length;
   return res.json(result);
 };
 
