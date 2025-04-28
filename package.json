@@ -12,6 +12,7 @@
     "cheerio": "^1.0.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "puppeteer": "^24.7.2"
   }
 }
