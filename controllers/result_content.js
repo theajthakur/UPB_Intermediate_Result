@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 
-async function fetchUPMSPResult(rollNo, standard = 12, districtCode = 45) {
+async function fetchUPMSPResult(standard = 12, districtCode = 45, rollNo) {
   let suffix = "ResultHighSchool";
   if (standard == 12) {
     suffix = "ResultIntermediate";
