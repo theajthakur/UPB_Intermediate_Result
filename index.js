@@ -7,7 +7,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://upb-intermediate-result-front-end.vercel.app",
-      "https://upmsp.vercel.app/",
+      "https://upmsp.vercel.app",
     ],
   })
 );
